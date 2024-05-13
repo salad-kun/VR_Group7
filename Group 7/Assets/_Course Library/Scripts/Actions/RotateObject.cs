@@ -10,6 +10,7 @@ public class RotateObject : MonoBehaviour
 
     [Tooltip("The max speed of the rotation")]
     public float speed = 10.0f;
+    public float currentSpeed = 0.0f;
 
     private bool isRotating = false;
 
@@ -50,11 +51,24 @@ public class RotateObject : MonoBehaviour
     private void Update()
     {
         if (isRotating)
-            Rotate();
+            RotateFast();
+        else
+            RotateSlow();
     }
 
-    private void Rotate()
+    private void RotateFast()
     {
-        transform.Rotate(transform.up, (sensitivity * speed) * Time.deltaTime);
+        // Gradually increase the current speed towards the target speed
+        currentSpeed = Mathf.MoveTowards(currentSpeed, speed, Time.deltaTime * 50f);
+
+        transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
+    }
+
+    private void RotateSlow()
+    {
+        // Gradually increase the current speed towards the target speed
+        currentSpeed = Mathf.MoveTowards(currentSpeed, 0, Time.deltaTime * 50f);
+
+        transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
     }
 }

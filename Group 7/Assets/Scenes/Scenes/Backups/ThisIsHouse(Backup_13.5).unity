@@ -2450,24 +2450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherMaterial: {fileID: 2100000, guid: 2f93e71c4b859c14bbf803571fe8f3dc, type: 2}
   findChild: 1
---- !u!1 &392056286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3942258107334499155, guid: 478a8e88065b8b14bb8f8622623bc3ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 1551504868}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &392056290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392056286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0923b217230a44a48a0384881da14c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,10 +8050,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2032840938}
-    - targetCorrespondingSourceObject: {fileID: 3942258107334499155, guid: 478a8e88065b8b14bb8f8622623bc3ca,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 392056290}
   m_SourcePrefab: {fileID: 100100000, guid: 478a8e88065b8b14bb8f8622623bc3ca, type: 3}
 --- !u!1001 &1557029332
 PrefabInstance:
@@ -8447,18 +8425,6 @@ MonoBehaviour:
       - m_Target: {fileID: 242084040}
         m_TargetAssemblyTypeName: RotateObject, Assembly-CSharp
         m_MethodName: ToggleRotate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 392056290}
-        m_TargetAssemblyTypeName: RotateLightSwtich, Assembly-CSharp
-        m_MethodName: flipSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
