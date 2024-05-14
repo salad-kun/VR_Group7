@@ -53,9 +53,8 @@ public class rotateObjectThenStop : MonoBehaviour
         if (isRotating)
             RotateFast();
         else
-            RotateSlow();
+            RotateStop();
     }
-
     private void RotateFast()
     {
         // Gradually increase the current speed towards the target speed
@@ -64,9 +63,9 @@ public class rotateObjectThenStop : MonoBehaviour
         transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
     }
 
-    private void RotateSlow()
+    private void RotateStop()
     {
-        // Gradually increase the current speed towards the target speed
+        //Make an abrupt stop
         currentSpeed = Mathf.MoveTowards(0, 0, Time.deltaTime * 50f);
 
         transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
