@@ -14,6 +14,9 @@ public class rotateObjectThenStop : MonoBehaviour
 
     private bool isRotating = false;
 
+    private AudioSource audioSource;
+    private AudioClip audioClip;
+
     public void SetIsRotating(bool value)
     {
         if (value)
@@ -61,6 +64,22 @@ public class rotateObjectThenStop : MonoBehaviour
         currentSpeed = Mathf.MoveTowards(currentSpeed, speed, Time.deltaTime * 50f);
 
         transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
+
+       // audioSource = GetComponent<AudioSource>();
+       //
+       // if (audioSource != null)
+       // {
+       //     Debug.LogError("AudioSource component found on this GameObject.");
+       // }
+       //
+       // audioSource.clip = audioClip;
+       //
+       // if (audioSource.clip != null)
+       // {
+       //     Debug.LogError("AudioClip component found on this GameOjbect");
+       // }
+       //
+       // audioSource.Play();
     }
 
     private void RotateStop()
