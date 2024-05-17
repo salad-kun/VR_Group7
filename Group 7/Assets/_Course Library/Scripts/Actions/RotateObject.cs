@@ -66,7 +66,7 @@ public class RotateObject : MonoBehaviour
 
     private void RotateSlow()
     {
-        // Gradually increase the current speed towards the target speed
+        // Gradually decrease the current speed towards the target speed
         currentSpeed = Mathf.MoveTowards(currentSpeed, 0, Time.deltaTime * 50f);
 
         transform.Rotate(transform.up, (sensitivity * currentSpeed) * Time.deltaTime);
