@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 public class DrawerScript : MonoBehaviour
 {
-    public Transform drawer; // Reference to the drawer transform
-    public float openDistance = 0.5f; // Distance the drawer should open
-    public float speed = 2f; // Speed at which the drawer moves
+    public Transform drawer;
+    public float openDistance = 0.5f;
+    public float speed = 2f;
     private Vector3 closedPosition;
     private Vector3 openPosition;
     private bool isOpening = false;
@@ -16,7 +16,7 @@ public class DrawerScript : MonoBehaviour
     {
         if (drawer == null)
         {
-            drawer = transform; // If no drawer assigned, use the object's transform
+            drawer = transform;
         }
         closedPosition = drawer.localPosition;
         openPosition = closedPosition + new Vector3(0, 0, openDistance);
