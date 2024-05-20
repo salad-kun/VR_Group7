@@ -17,7 +17,7 @@ public class RotateCabinetDoor : MonoBehaviour
         }
         else
         {
-            transform.Rotate(Vector3.up, angle); // Rotate 90 degrees when switched on
+            transform.Rotate(Vector3.up, -angle); // Rotate 90 degrees when switched on
         }
     }
 }
